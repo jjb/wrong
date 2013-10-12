@@ -6,7 +6,7 @@ if Object.const_defined? :RSpec
 
   if RSpec.const_defined? :Rails
     require 'rails/version'
-    if Rails::VERSION::MAJOR == 3
+    if Rails::VERSION::MAJOR >= 3
       # RSpec 2 plus Rails 3
       module RSpec::Rails::TestUnitAssertionAdapter
         included do
